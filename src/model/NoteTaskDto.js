@@ -45,6 +45,8 @@ export class NoteTaskDto {
         obj.name = ApiClient.convertToType(data['name'], 'String');
       if (data.hasOwnProperty('date'))
         obj._date = ApiClient.convertToType(data['date'], 'Date');
+      if (data.hasOwnProperty('seconds'))
+        obj.seconds = ApiClient.convertToType(data['seconds'], 'Number');
     }
     return obj;
   }
@@ -64,4 +66,9 @@ NoteTaskDto.prototype.name = undefined;
  * @member {Date} _date
  */
 NoteTaskDto.prototype._date = undefined;
+
+/**
+ * @member {Number} seconds
+ */
+NoteTaskDto.prototype.seconds = undefined;
 
