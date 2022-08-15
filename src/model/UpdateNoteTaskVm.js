@@ -14,6 +14,8 @@
  *
  */
 import {ApiClient} from '../ApiClient';
+import {MatricesEnum} from './MatricesEnum';
+import {ProgressConditionEnum} from './ProgressConditionEnum';
 
 /**
  * The UpdateNoteTaskVm model module.
@@ -50,9 +52,9 @@ export class UpdateNoteTaskVm {
       if (data.hasOwnProperty('date'))
         obj._date = ApiClient.convertToType(data['date'], 'Date');
       if (data.hasOwnProperty('matrixId'))
-        obj.matrixId = ApiClient.convertToType(data['matrixId'], 'Number');
+        obj.matrixId = MatricesEnum.constructFromObject(data['matrixId']);
       if (data.hasOwnProperty('progressConditionId'))
-        obj.progressConditionId = ApiClient.convertToType(data['progressConditionId'], 'Number');
+        obj.progressConditionId = ProgressConditionEnum.constructFromObject(data['progressConditionId']);
     }
     return obj;
   }
@@ -84,12 +86,12 @@ UpdateNoteTaskVm.prototype.seconds = undefined;
 UpdateNoteTaskVm.prototype._date = undefined;
 
 /**
- * @member {Number} matrixId
+ * @member {module:model/MatricesEnum} matrixId
  */
 UpdateNoteTaskVm.prototype.matrixId = undefined;
 
 /**
- * @member {Number} progressConditionId
+ * @member {module:model/ProgressConditionEnum} progressConditionId
  */
 UpdateNoteTaskVm.prototype.progressConditionId = undefined;
 

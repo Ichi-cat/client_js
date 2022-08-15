@@ -28,6 +28,8 @@ import {NoteListDto} from './model/NoteListDto';
 import {NoteTaskDetailsDto} from './model/NoteTaskDetailsDto';
 import {NoteTaskDto} from './model/NoteTaskDto';
 import {NoteTaskListDto} from './model/NoteTaskListDto';
+import {Operation} from './model/Operation';
+import {OperationType} from './model/OperationType';
 import {ProblemDetails} from './model/ProblemDetails';
 import {ProgressConditionDto} from './model/ProgressConditionDto';
 import {ProgressConditionEnum} from './model/ProgressConditionEnum';
@@ -162,6 +164,18 @@ export {
      * @property {module:model/NoteTaskListDto}
      */
     NoteTaskListDto,
+
+    /**
+     * The Operation model constructor.
+     * @property {module:model/Operation}
+     */
+    Operation,
+
+    /**
+     * The OperationType model constructor.
+     * @property {module:model/OperationType}
+     */
+    OperationType,
 
     /**
      * The ProblemDetails model constructor.

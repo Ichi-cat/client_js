@@ -52,7 +52,7 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: application/json, text/json, application/_*+json
+ - **Content-Type**: application/json-patch+json, application/json, text/json, application/_*+json
  - **Accept**: application/json
 
 <a name="deleteNote"></a>
@@ -266,6 +266,6 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: application/json, text/json, application/_*+json
+ - **Content-Type**: application/json-patch+json, application/json, text/json, application/_*+json
  - **Accept**: application/json
 

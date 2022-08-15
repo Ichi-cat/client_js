@@ -18,6 +18,7 @@ import {CreateNoteTaskVm} from '../model/CreateNoteTaskVm';
 import {MatricesEnum} from '../model/MatricesEnum';
 import {NoteTaskDetailsDto} from '../model/NoteTaskDetailsDto';
 import {NoteTaskListDto} from '../model/NoteTaskListDto';
+import {Operation} from '../model/Operation';
 import {ProblemDetails} from '../model/ProblemDetails';
 import {ProgressConditionEnum} from '../model/ProgressConditionEnum';
 import {UpdateNoteTaskVm} from '../model/UpdateNoteTaskVm';
@@ -78,7 +79,7 @@ export class NoteTaskApi {
       };
 
       let authNames = [];
-      let contentTypes = ['application/json', 'text/json', 'application/_*+json'];
+      let contentTypes = ['application/json-patch+json', 'application/json', 'text/json', 'application/_*+json'];
       let accepts = ['application/json'];
       let returnType = 'String';
 
@@ -368,12 +369,63 @@ export class NoteTaskApi {
       };
 
       let authNames = [];
-      let contentTypes = ['application/json', 'text/json', 'application/_*+json'];
+      let contentTypes = ['application/json-patch+json', 'application/json', 'text/json', 'application/_*+json'];
       let accepts = ['application/json'];
       let returnType = null;
 
       return this.apiClient.callApi(
         '/NoteTask', 'PUT',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, callback
+      );
+    }
+    /**
+     * Callback function to receive the result of the updateNoteTaskPatch operation.
+     * @callback moduleapi/NoteTaskApi~updateNoteTaskPatchCallback
+     * @param {String} error Error message, if any.
+     * @param data This operation does not return a value.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * @param {String} id 
+     * @param {String} apiVersion 
+     * @param {Object} opts Optional parameters
+     * @param {Array.<module:model/Operation>} opts.body 
+     * @param {module:api/NoteTaskApi~updateNoteTaskPatchCallback} callback The callback function, accepting three arguments: error, data, response
+     */
+    updateNoteTaskPatch(id, apiVersion, opts, callback) {
+      opts = opts || {};
+      let postBody = opts['body'];
+      // verify the required parameter 'id' is set
+      if (id === undefined || id === null) {
+        throw new Error("Missing the required parameter 'id' when calling updateNoteTaskPatch");
+      }
+      // verify the required parameter 'apiVersion' is set
+      if (apiVersion === undefined || apiVersion === null) {
+        throw new Error("Missing the required parameter 'apiVersion' when calling updateNoteTaskPatch");
+      }
+
+      let pathParams = {
+        'id': id
+      };
+      let queryParams = {
+        'api-version': apiVersion
+      };
+      let headerParams = {
+        
+      };
+      let formParams = {
+        
+      };
+
+      let authNames = [];
+      let contentTypes = ['application/json-patch+json', 'application/json', 'text/json', 'application/_*+json'];
+      let accepts = ['application/json'];
+      let returnType = null;
+
+      return this.apiClient.callApi(
+        '/NoteTask/{id}', 'PATCH',
         pathParams, queryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, callback
       );

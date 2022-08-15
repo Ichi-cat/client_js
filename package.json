@@ -1,6 +1,6 @@
 {
   "name": "notes",
-  "version": "1.1.0",
+  "version": "1.2.0",
   "description": "Backend_app_with_Notes_and_Notetasks",
   "license": "License",
   "main": "src/index.js",

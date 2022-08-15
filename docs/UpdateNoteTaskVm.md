@@ -8,5 +8,5 @@ Name | Type | Description | Notes
 **text** | **String** |  | [optional] 
 **seconds** | **Number** |  | [optional] 
 **_date** | **Date** |  | [optional] 
-**matrixId** | **Number** |  | [optional] 
-**progressConditionId** | **Number** |  | [optional] 
+**matrixId** | [**MatricesEnum**](MatricesEnum.md) |  | [optional] 
+**progressConditionId** | [**ProgressConditionEnum**](ProgressConditionEnum.md) |  | [optional] 

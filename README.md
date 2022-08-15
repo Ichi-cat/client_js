@@ -110,6 +110,7 @@ Class | Method | HTTP request | Description
 *Notes.NoteTaskApi* | [**getNoteTaskByProgressCondition**](docs/NoteTaskApi.md#getNoteTaskByProgressCondition) | **GET** /NoteTask/byprogresscondition/{id} | 
 *Notes.NoteTaskApi* | [**getNoteTasks**](docs/NoteTaskApi.md#getNoteTasks) | **GET** /NoteTask | 
 *Notes.NoteTaskApi* | [**updateNoteTask**](docs/NoteTaskApi.md#updateNoteTask) | **PUT** /NoteTask | 
+*Notes.NoteTaskApi* | [**updateNoteTaskPatch**](docs/NoteTaskApi.md#updateNoteTaskPatch) | **PATCH** /NoteTask/{id} | 
 *Notes.ProgressConditionApi* | [**getProgressConditions**](docs/ProgressConditionApi.md#getProgressConditions) | **GET** /ProgressCondition | 
 
 ## Documentation for Models
@@ -128,6 +129,8 @@ Class | Method | HTTP request | Description
  - [Notes.NoteTaskDetailsDto](docs/NoteTaskDetailsDto.md)
  - [Notes.NoteTaskDto](docs/NoteTaskDto.md)
  - [Notes.NoteTaskListDto](docs/NoteTaskListDto.md)
+ - [Notes.Operation](docs/Operation.md)
+ - [Notes.OperationType](docs/OperationType.md)
  - [Notes.ProblemDetails](docs/ProblemDetails.md)
  - [Notes.ProgressConditionDto](docs/ProgressConditionDto.md)
  - [Notes.ProgressConditionEnum](docs/ProgressConditionEnum.md)

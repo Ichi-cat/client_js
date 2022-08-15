@@ -11,6 +11,7 @@ Method | HTTP request | Description
 [**getNoteTaskByProgressCondition**](NoteTaskApi.md#getNoteTaskByProgressCondition) | **GET** /NoteTask/byprogresscondition/{id} | 
 [**getNoteTasks**](NoteTaskApi.md#getNoteTasks) | **GET** /NoteTask | 
 [**updateNoteTask**](NoteTaskApi.md#updateNoteTask) | **PUT** /NoteTask | 
+[**updateNoteTaskPatch**](NoteTaskApi.md#updateNoteTaskPatch) | **PATCH** /NoteTask/{id} | 
 
 <a name="createNoteTask"></a>
 # **createNoteTask**
@@ -53,7 +54,7 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: application/json, text/json, application/_*+json
+ - **Content-Type**: application/json-patch+json, application/json, text/json, application/_*+json
  - **Accept**: application/json
 
 <a name="deleteNoteTask"></a>
@@ -310,6 +311,52 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: application/json, text/json, application/_*+json
+ - **Content-Type**: application/json-patch+json, application/json, text/json, application/_*+json
+ - **Accept**: application/json
+
+<a name="updateNoteTaskPatch"></a>
+# **updateNoteTaskPatch**
+> updateNoteTaskPatch(id, apiVersion, opts)
+
+
+
+### Example
+```javascript
+import {Notes} from 'notes';
+
+let apiInstance = new Notes.NoteTaskApi();
+let id = "38400000-8cf0-11bd-b23e-10b96e4ef00d"; // String | 
+let apiVersion = "apiVersion_example"; // String | 
+let opts = { 
+  'body': [new Notes.Operation()] // [Operation] | 
+};
+apiInstance.updateNoteTaskPatch(id, apiVersion, opts, (error, data, response) => {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully.');
+  }
+});
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | [**String**](.md)|  | 
+ **apiVersion** | **String**|  | 
+ **body** | [**[Operation]**](Operation.md)|  | [optional] 
+
+### Return type
+
+null (empty response body)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: application/json-patch+json, application/json, text/json, application/_*+json
  - **Accept**: application/json
 

@@ -174,6 +174,25 @@
           done();
         });
       });
+      describe('updateNoteTaskPatch', function() {
+        it('should call updateNoteTaskPatch successfully', function(done) {
+          // TODO: uncomment, update parameter values for updateNoteTaskPatch call
+          /*
+          var opts = {};
+
+          instance.updateNoteTaskPatch(id, apiVersion, opts, function(error, data, response) {
+            if (error) {
+              done(error);
+              return;
+            }
+
+            done();
+          });
+          */
+          // TODO: uncomment and complete method invocation above, then delete this line and the next:
+          done();
+        });
+      });
     });
   });
 

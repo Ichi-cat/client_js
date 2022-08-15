@@ -75,7 +75,7 @@ export class CategoryApi {
       };
 
       let authNames = [];
-      let contentTypes = ['application/json', 'text/json', 'application/_*+json'];
+      let contentTypes = ['application/json-patch+json', 'application/json', 'text/json', 'application/_*+json'];
       let accepts = ['application/json'];
       let returnType = 'String';
 
@@ -215,7 +215,7 @@ export class CategoryApi {
       };
 
       let authNames = [];
-      let contentTypes = ['application/json', 'text/json', 'application/_*+json'];
+      let contentTypes = ['application/json-patch+json', 'application/json', 'text/json', 'application/_*+json'];
       let accepts = ['application/json'];
       let returnType = null;
 
