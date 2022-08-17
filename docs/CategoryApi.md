@@ -18,6 +18,8 @@ Method | HTTP request | Description
 ### Example
 ```javascript
 import {Notes} from 'notes';
+let defaultClient = Notes.ApiClient.instance;
+
 
 let apiInstance = new Notes.CategoryApi();
 let apiVersion = "apiVersion_example"; // String | 
@@ -46,7 +48,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-No authorization required
+[oauth2](../README.md#oauth2)
 
 ### HTTP request headers
 
@@ -62,6 +64,8 @@ No authorization required
 ### Example
 ```javascript
 import {Notes} from 'notes';
+let defaultClient = Notes.ApiClient.instance;
+
 
 let apiInstance = new Notes.CategoryApi();
 let id = "38400000-8cf0-11bd-b23e-10b96e4ef00d"; // String | 
@@ -89,7 +93,7 @@ null (empty response body)
 
 ### Authorization
 
-No authorization required
+[oauth2](../README.md#oauth2)
 
 ### HTTP request headers
 
@@ -105,6 +109,8 @@ No authorization required
 ### Example
 ```javascript
 import {Notes} from 'notes';
+let defaultClient = Notes.ApiClient.instance;
+
 
 let apiInstance = new Notes.CategoryApi();
 let apiVersion = "apiVersion_example"; // String | 
@@ -130,7 +136,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-No authorization required
+[oauth2](../README.md#oauth2)
 
 ### HTTP request headers
 
@@ -146,6 +152,8 @@ No authorization required
 ### Example
 ```javascript
 import {Notes} from 'notes';
+let defaultClient = Notes.ApiClient.instance;
+
 
 let apiInstance = new Notes.CategoryApi();
 let apiVersion = "apiVersion_example"; // String | 
@@ -174,7 +182,7 @@ null (empty response body)
 
 ### Authorization
 
-No authorization required
+[oauth2](../README.md#oauth2)
 
 ### HTTP request headers
 

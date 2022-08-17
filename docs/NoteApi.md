@@ -10,6 +10,7 @@ Method | HTTP request | Description
 [**getNotes**](NoteApi.md#getNotes) | **GET** /Note | 
 [**getNotesByCategoryId**](NoteApi.md#getNotesByCategoryId) | **GET** /Note/ByCategory/{id} | 
 [**updateNote**](NoteApi.md#updateNote) | **PUT** /Note | 
+[**updateNotePatch**](NoteApi.md#updateNotePatch) | **PATCH** /Note/{id} | 
 
 <a name="createNote"></a>
 # **createNote**
@@ -20,6 +21,8 @@ Method | HTTP request | Description
 ### Example
 ```javascript
 import {Notes} from 'notes';
+let defaultClient = Notes.ApiClient.instance;
+
 
 let apiInstance = new Notes.NoteApi();
 let apiVersion = "apiVersion_example"; // String | 
@@ -48,7 +51,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-No authorization required
+[oauth2](../README.md#oauth2)
 
 ### HTTP request headers
 
@@ -64,6 +67,8 @@ No authorization required
 ### Example
 ```javascript
 import {Notes} from 'notes';
+let defaultClient = Notes.ApiClient.instance;
+
 
 let apiInstance = new Notes.NoteApi();
 let id = "38400000-8cf0-11bd-b23e-10b96e4ef00d"; // String | 
@@ -91,7 +96,7 @@ null (empty response body)
 
 ### Authorization
 
-No authorization required
+[oauth2](../README.md#oauth2)
 
 ### HTTP request headers
 
@@ -107,6 +112,8 @@ No authorization required
 ### Example
 ```javascript
 import {Notes} from 'notes';
+let defaultClient = Notes.ApiClient.instance;
+
 
 let apiInstance = new Notes.NoteApi();
 let id = "38400000-8cf0-11bd-b23e-10b96e4ef00d"; // String | 
@@ -134,7 +141,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-No authorization required
+[oauth2](../README.md#oauth2)
 
 ### HTTP request headers
 
@@ -150,6 +157,8 @@ No authorization required
 ### Example
 ```javascript
 import {Notes} from 'notes';
+let defaultClient = Notes.ApiClient.instance;
+
 
 let apiInstance = new Notes.NoteApi();
 let apiVersion = "apiVersion_example"; // String | 
@@ -175,7 +184,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-No authorization required
+[oauth2](../README.md#oauth2)
 
 ### HTTP request headers
 
@@ -191,6 +200,8 @@ No authorization required
 ### Example
 ```javascript
 import {Notes} from 'notes';
+let defaultClient = Notes.ApiClient.instance;
+
 
 let apiInstance = new Notes.NoteApi();
 let id = "38400000-8cf0-11bd-b23e-10b96e4ef00d"; // String | 
@@ -218,7 +229,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-No authorization required
+[oauth2](../README.md#oauth2)
 
 ### HTTP request headers
 
@@ -234,6 +245,8 @@ No authorization required
 ### Example
 ```javascript
 import {Notes} from 'notes';
+let defaultClient = Notes.ApiClient.instance;
+
 
 let apiInstance = new Notes.NoteApi();
 let apiVersion = "apiVersion_example"; // String | 
@@ -262,7 +275,55 @@ null (empty response body)
 
 ### Authorization
 
-No authorization required
+[oauth2](../README.md#oauth2)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json-patch+json, application/json, text/json, application/_*+json
+ - **Accept**: application/json
+
+<a name="updateNotePatch"></a>
+# **updateNotePatch**
+> updateNotePatch(id, apiVersion, opts)
+
+
+
+### Example
+```javascript
+import {Notes} from 'notes';
+let defaultClient = Notes.ApiClient.instance;
+
+
+let apiInstance = new Notes.NoteApi();
+let id = "38400000-8cf0-11bd-b23e-10b96e4ef00d"; // String | 
+let apiVersion = "apiVersion_example"; // String | 
+let opts = { 
+  'body': [new Notes.Operation()] // [Operation] | 
+};
+apiInstance.updateNotePatch(id, apiVersion, opts, (error, data, response) => {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully.');
+  }
+});
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | [**String**](.md)|  | 
+ **apiVersion** | **String**|  | 
+ **body** | [**[Operation]**](Operation.md)|  | [optional] 
+
+### Return type
+
+null (empty response body)
+
+### Authorization
+
+[oauth2](../README.md#oauth2)
 
 ### HTTP request headers
 

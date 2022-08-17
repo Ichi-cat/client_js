@@ -15,6 +15,8 @@ Method | HTTP request | Description
 ### Example
 ```javascript
 import {Notes} from 'notes';
+let defaultClient = Notes.ApiClient.instance;
+
 
 let apiInstance = new Notes.ProgressConditionApi();
 let apiVersion = "apiVersion_example"; // String | 
@@ -40,7 +42,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-No authorization required
+[oauth2](../README.md#oauth2)
 
 ### HTTP request headers
 
